@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- udacity_bot -->
+<launch>
+
+  <!-- Robot World Launch -->
+  <include file="$(find panos_bot)/launch/panos_world.launch"/>
+
+  <!-- AMCL Launch -->
+  <include file="$(find panos_bot)/launch/amcl.launch"/>
+
+
+</launch>
