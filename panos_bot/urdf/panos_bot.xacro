@@ -68,10 +68,6 @@
     </visual>
   </link>
 
-  <gazebo reference="chassis">
-    <material>Gazebo/Green</material>
-  </gazebo>
-
   <!-- sensor base -->
   <link name='sensor_base'>
     <pose>0 0 0 0 0 0</pose>
@@ -98,17 +94,11 @@
       <geometry>
         <box size=".15 .15 .25"/>
       </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
     </visual>
   </link>
-
-  <joint type="fixed" name="sensor_base_joint">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <child link="sensor_base"/>
-    <parent link="chassis"/>
-  </joint>
-
-
-
 
   <!-- Left Wheel Link -->
   
@@ -140,10 +130,6 @@
     </collision>
   </link>
 
-  <gazebo reference="left_wheel">
-    <material>Gazebo/Blue</material>
-  </gazebo>
-
   <!-- Right Wheel Link -->
 
   <link name="right_wheel">
@@ -174,10 +160,6 @@
     </collision>
   </link>
 
-
-  <gazebo reference="right_wheel">
-    <material>Gazebo/Blue</material>
-  </gazebo>
   <!-- Camera Link -->
 
   <link name="camera">
@@ -208,9 +190,7 @@
     </collision>
   </link>
 
-  <gazebo reference="camera">
-    <material>Gazebo/Yellow</material>
-  </gazebo>
+
   <!-- Hokuyo Link -->
 
   <link name="hokuyo">
@@ -241,9 +221,6 @@
     </collision>
   </link>
 
-  <gazebo reference="hokuyo">
-    <material>Gazebo/Red</material>
-  </gazebo>
   <!-- Joints -->
 
   <joint type="continuous" name="left_wheel_hinge">
@@ -275,6 +252,12 @@
     <origin xyz="0 0 0.275" rpy="0 0 0"/>
     <child link="hokuyo"/>
     <parent link="sensor_base"/>
+  </joint>
+
+  <joint type="fixed" name="sensor_base_joint">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <child link="sensor_base"/>
+    <parent link="chassis"/>
   </joint>
 
 </robot>
