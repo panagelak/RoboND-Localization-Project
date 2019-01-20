@@ -10,6 +10,7 @@ Panels:
         - /PoseArray1
         - /Map1
         - /LaserScan1
+        - /Pose1
       Splitter Ratio: 0.5
     Tree Height: 369
   - Class: rviz/Selection
@@ -116,6 +117,7 @@ Visualization Manager:
         Grid: true
         LaserScan: true
         Map: true
+        Pose: true
         PoseArray: true
         RobotModel: true
         Value: true
@@ -163,7 +165,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: -999999
+      Min Intensity: 0
       Name: LaserScan
       Position Transformer: XYZ
       Queue Size: 10
@@ -175,6 +177,21 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.100000001
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.300000012
+      Head Radius: 0.100000001
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.0500000007
+      Shape: Arrow
+      Topic: /move_base_simple/goal
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
@@ -201,16 +218,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10
+      Distance: 4.56478357
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.687773883
-        Y: 1.26112092
-        Z: -0.405416965
+        X: 1.31160402
+        Y: -2.4097054
+        Z: 0.776476622
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
